@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Home = () => {
-    return <div>Home ward bound</div>
+    return <div>Homeward bound</div>
 };
 
 export default Home;
