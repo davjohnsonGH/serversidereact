@@ -22777,7 +22777,7 @@ var Home = function Home() {
     return _react2.default.createElement(
         'div',
         null,
-        'Home bound'
+        'Home ward bound'
     );
 };
 
