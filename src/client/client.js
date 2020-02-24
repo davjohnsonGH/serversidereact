@@ -1,3 +1,6 @@
 // start up point for client side app
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Home from './component/Home';
 
-console.log('lelleo')
+ReactDOM.render(<Home />, document.getElementById('root'));
