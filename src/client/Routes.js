@@ -1,16 +1,15 @@
 import React from 'react';
-import Home from './component/Home';
-import UsersList, { loadData } from './component/UsersList';
+import HomePage from './pages/HomePage';
+import UsersListPage, { loadData } from './pages/UsersListPage';
 // react router config
 export default [
     {
+        ...HomePage,
         path: '/',
-        component: Home,
         exact: true
     },
     {   
-        loadData,
-        path: '/users',
-        component: UsersList
+        ...UsersListPage,
+        path: '/users'
     }
 ];
