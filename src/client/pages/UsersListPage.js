@@ -33,5 +33,4 @@ function loadData (store) {
 export default { 
     loadData,
     component: connect(mapStateToProps, { fetchUsers })(UsersList)
-
-}
+};
