@@ -1,10 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-export default () => {
+const Header = ( {auth} ) => {
+
+    const authButton = auth ? (
+        <a href="/api/logout">Logout</a>
+    ) : <a href="/api/auth/google">Login</a>
     return (
         <div>
             <Link to="/">react ssr</Link>
+            <div>
+                <Link to="/users">users</Link>
+                <Link to="/admins">Admin</Link>
+                { authButton }
+            </div>
         </div>
     );
 };
+
+function mapStateToProps ( { auth } ) {
+    return { auth };
+}
+
+export default connect(mapStateToProps)(Header);
